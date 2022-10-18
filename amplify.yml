@@ -16,11 +16,11 @@ applications:
             - npx nx build poc-ssr
             - echo 'finish build'
       artifacts:
-        baseDirectory: ../../dist/poc-ssr/.next
+        baseDirectory: ../../dist/apps/poc-ssr/.next
         files:
           - '**/*'
         discard-paths: yes
       cache:
         paths:
           - node_modules/**/*
-          - ../../dist/poc-ssr/.next/cache/**/*
+          - ../../dist/apps/poc-ssr/.next/cache/**/*
