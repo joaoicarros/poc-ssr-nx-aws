@@ -1,0 +1,26 @@
+version: 1
+applications:
+  - appRoot: apps/poc-ssr
+    frontend:
+      phases:
+        preBuild:
+          commands:
+            - echo 'change config amplifyConfig '
+            - cd ../../
+            - pwd
+            - npm install -g nx
+            - npm install
+        build:
+          commands:
+            - echo 'npx nx build'
+            - npx nx build poc-ssr
+            - echo 'finish build'
+      artifacts:
+        baseDirectory: ../../dist/poc-ssr/.next
+        files:
+          - '**/*'
+        discard-paths: yes
+      cache:
+        paths:
+          - node_modules/**/*
+          - ../../dist/poc-ssr/.next/cache/**/*
