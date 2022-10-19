@@ -10,19 +10,20 @@ applications:
             - pwd
             - npm install -g nx
             - npm install
+            - cd apps/poc-ssr
         build:
           commands:
             - echo 'npx nx build and comment'
-            - npx nx build poc-ssr
+            - npm run build
             # This step will build/update SSR resources(S3, Cloudfront, Lambda@Edge)
             # - cd apps/poc-ssr
             # - npm install
       artifacts:
-        baseDirectory: ../../dist/apps/poc-ssr/.next
+        baseDirectory: .next
         files:
           - '**/*'
         discard-paths: yes
       cache:
         paths:
           - ../../node_modules/**/*
-          - ../../dist/apps/poc-ssr/.next/cache/**/*
+          - .next/cache/**/*
