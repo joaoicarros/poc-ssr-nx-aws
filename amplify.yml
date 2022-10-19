@@ -8,6 +8,7 @@ applications:
             - echo 'change config amplifyConfig '
             - npm install
             - pwd
+            - npm i next
         build:
           commands:
             - echo 'npx nx build and comment'
