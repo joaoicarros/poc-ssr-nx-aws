@@ -6,13 +6,8 @@ applications:
         preBuild:
           commands:
             - echo 'change config amplifyConfig '
-            - cd ../../
-            - pwd
-            - npm install -g nx
             - npm install
-            - cd apps/poc-ssr
             - pwd
-            - npm i next
         build:
           commands:
             - echo 'npx nx build and comment'
