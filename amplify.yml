@@ -12,12 +12,11 @@ applications:
             - npm install
         build:
           commands:
-            - echo 'npx nx build'
+            - echo 'npx nx build and comment'
             - npx nx build poc-ssr
-            - cd apps/poc-ssr
-            - echo 'start install in folder apps/poc-ssr'
-            - npm install
-            - echo 'finish build'
+            # This step will build/update SSR resources(S3, Cloudfront, Lambda@Edge)
+            # - cd apps/poc-ssr
+            # - npm install
       artifacts:
         baseDirectory: ../../dist/apps/poc-ssr/.next
         files:
