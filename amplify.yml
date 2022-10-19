@@ -6,7 +6,9 @@ applications:
         preBuild:
           commands:
             - echo 'change config amplifyConfig '
+            - cd ../../
             - npm install
+            - cd apps/poc-ssr
             - pwd
             - npm i next
         build:
