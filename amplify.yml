@@ -22,5 +22,5 @@ applications:
         discard-paths: yes
       cache:
         paths:
-          - node_modules/**/*
+          - ../../node_modules/**/*
           - ../../dist/apps/poc-ssr/.next/cache/**/*
