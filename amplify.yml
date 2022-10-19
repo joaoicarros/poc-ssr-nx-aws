@@ -14,6 +14,9 @@ applications:
           commands:
             - echo 'npx nx build'
             - npx nx build poc-ssr
+            - cd apps/poc-ssr
+            - echo 'start install in folder apps/poc-ssr'
+            - npm install
             - echo 'finish build'
       artifacts:
         baseDirectory: ../../dist/apps/poc-ssr/.next
