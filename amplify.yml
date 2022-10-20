@@ -5,19 +5,13 @@ applications:
       phases:
         preBuild:
           commands:
-            - echo 'change config amplifyConfig '
             - cd ../../
             - npm install
             - cd apps/poc-ssr
-            - pwd
             - npm i next
         build:
           commands:
-            - echo 'npx nx build and comment'
             - npm run build
-            # This step will build/update SSR resources(S3, Cloudfront, Lambda@Edge)
-            # - cd apps/poc-ssr
-            # - npm install
       artifacts:
         baseDirectory: .next
         files:
